@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
     }  
     //gan dia chi cho socket
     // gan cong port 8080 
-    if (SetSockOpt(kServer_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &kOpt, sizeof(kOpt))) 
+    if (setsockopt(kServer_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &kOpt, sizeof(kOpt))) 
     { 
         perror("SetSockOpt"); 
         exit(EXIT_FAILURE); 
